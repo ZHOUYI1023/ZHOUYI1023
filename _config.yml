@@ -25,10 +25,10 @@ description: Some learning notes
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+    - Techincal News: "https://github.com/ZHOUYI1023/PaopaoNews"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
-  Author's home: "http://deanattali.com"
+  # Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -73,12 +73,12 @@ author:
 social-network-links:
   rss: true
   email: "zhouyi1023@tju.edu.cn"
-  facebook: daattali
-  github: daattali
-  twitter: daattali
+  # facebook: daattali
+  github: ZHOUYI1023
+  twitter: YiZhou11539370
+  linkedin: yi-zhou-6269a8112
 #  reddit: yourname
 #  google-plus: +DeanAttali
-#  linkedin: daattali
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -94,12 +94,12 @@ social-network-links:
 share-links-active:
   twitter: true
   facebook: true
-  google: false
+  google: true
   linkedin: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+# url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 

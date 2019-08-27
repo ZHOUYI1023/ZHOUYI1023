@@ -6,6 +6,8 @@ tags: [AI][Testing]
 comments: true
 ---
 
+# Test for Machine Learning
+
 ## Software 2.0
 Artificial intelligence can be defined as Software 2.0, which means it is nothing less than a software but such software has a capability to learn and change its behaviour oevrtime. Thus, we need a new pattern for testing such softwares. 
 

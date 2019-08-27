@@ -6,6 +6,7 @@ tags: [Software Engineering][Testing]
 comments: true
 ---
 
+
 Verification|Validation
 -----|-----
 Are we building the system right?| Are we building the right system?

@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Verification & Validation
-# subtitle: Each post also has a subtitle
+subtitle: VV Process
 tags: [Software Engineering][Testing]
 comments: true
 ---
-[Website](https://www.softwaretestingclass.com/difference-between-verification-and-validation/)
+
 Verification|Validation
 -----|-----
 Are we building the system right?| Are we building the right system?

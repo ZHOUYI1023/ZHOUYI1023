@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Test for Machine Learning
-# subtitle: Each post also has a subtitle
+subtitle: Problems and Methods
 tags: [AI][Testing]
 comments: true
 ---

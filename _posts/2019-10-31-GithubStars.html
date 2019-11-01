@@ -1,0 +1,535 @@
+<!DOCTYPE html><html><head>
+      <title>GithubStars</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Yi\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.0\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h2 class="mume-header" id="simulator">Simulator</h2>
+
+<p><a href="https://github.com/ros/ros">ROS</a><br>
+<a href="https://github.com/ros2/ros2">ROS2</a><br>
+<a href="https://github.com/microsoft/AirSim">AirSim</a><br>
+<a href="https://github.com/ApolloAuto/apollo">Apollo</a><br>
+<a href="https://github.com/autowarefoundation/autoware">Autoware</a><br>
+<a href="https://github.com/udacity/self-driving-car">Udacity Self Driving</a><br>
+<a href="https://github.com/facebookresearch/pyrobot">PyRobot</a><br>
+<a href="https://github.com/geek-ai/MAgent">MAgent</a><br>
+<a href="https://github.com/qemu/qemu">QEMU</a></p>
+<h2 class="mume-header" id="tool">Tool</h2>
+
+<p><a href="https://github.com/tensorflow/tensorflow">TensorFlow</a><br>
+<a href="https://github.com/tensorlayer/tensorlayer">Tensor Layer</a><br>
+<a href="https://github.com/tensorflow/model-optimization">Model Optimization</a><br>
+<a href="https://github.com/pytorch/pytorch">PyTorch</a><br>
+<a href="https://github.com/onnx/onnx-tensorflow">ONNX</a><br>
+<a href="https://github.com/opencv/opencv">OpenCV</a><br>
+<a href="https://github.com/dmlc/gluon-cv">GluonCV</a><br>
+<a href="https://github.com/pjreddie/darknet">Darknet</a><br>
+<a href="https://github.com/kubernetes/kubernetes">Kubernetes</a><br>
+<a href="https://github.com/mlflow/mlflow">ML Flow</a><br>
+<a href="https://github.com/libigl/libigl">Libigl</a><br>
+<a href="https://github.com/Tencent/PocketFlow">Pocket Flow</a><br>
+<a href="https://github.com/microsoft/ELL">Embedded Learning Library</a><br>
+<a href="https://github.com/intel/mkl-dnn">MKL</a><br>
+<a href="https://github.com/hughperkins/DeepCL">DeepCL</a><br>
+<a href="https://github.com/facebookresearch/pythia">Pythia</a><br>
+<a href="https://github.com/ermig1979/Simd">SIMD</a><br>
+<a href="https://github.com/OAID/Tengine">Tengine</a><br>
+<a href="https://github.com/Artelnics/OpenNN">OpenNN</a><br>
+<a href="https://github.com/libfann/fann">FANN</a><br>
+<a href="https://github.com/open-mmlab/mmcv">mmcv</a><br>
+<a href="https://github.com/ros/meta-ros">meta ROS</a><br>
+<a href="https://github.com/PX4/eigen">eigen</a><br>
+<a href="https://github.com/strasdat/Sophus">Sophus</a><br>
+<a href="https://github.com/borglab/gtsam">gtsam</a><br>
+<a href="https://github.com/ceres-solver/ceres-solver">ceres</a><br>
+<a href="https://github.com/RainerKuemmerle/g2o">g2o</a><br>
+<a href="https://github.com/zju3dv/EIBA">EI BA</a><br>
+<a href="https://github.com/baidu/ICE-BA">ICE BA</a></p>
+<h2 class="mume-header" id="productivity">Productivity</h2>
+
+<p><a href="https://github.com/github/gitignore">gitignore</a><br>
+<a href="https://github.com/ytdl-org/youtube-dl">Youtube Downloader</a><br>
+<a href="https://github.com/google/styleguide">Google Sytle Guide</a><br>
+<a href="https://github.com/google/yapf">Python Formatter</a><br>
+<a href="https://github.com/pyinstaller/pyinstaller">PyInstaller</a><br>
+<a href="https://github.com/catchorg/Catch2">Catch2</a><br>
+<a href="https://github.com/HarisIqbal88/PlotNeuralNet">Plot Neural Net</a><br>
+<a href="https://github.com/kks32/phd-thesis-template">Thesis Template</a><br>
+<a href="https://github.com/cruise-automation/webviz">webviz</a><br>
+<a href="https://github.com/jabbalaci/PythonEXE">Python EXE</a><br>
+<a href="https://github.com/AliyunContainerService/arena">arena</a><br>
+<a href="https://github.com/flame/blislab">Blislab</a><br>
+<a href="https://github.com/pamela-project/slambench2">SLAM Bench</a><br>
+<a href="https://github.com/uzh-rpg/rpg_trajectory_evaluation">trajectory evaluation</a><br>
+<a href="https://github.com/HewlettPackard/dlcookbook-dlbs">DL Benchmark</a><br>
+<a href="https://github.com/lyft/nuscenes-devkit">nuscenes devkit</a><br>
+<a href="https://github.com/sakaridis/fog_simulation-SFSU_synthetic">Fog Simulation</a><br>
+<a href="https://github.com/NaturalIntelligence/imglab">imglab</a></p>
+<h2 class="mume-header" id="learning-materials">Learning Materials</h2>
+
+<p><a href="https://github.com/Doraemonzzz/CS205A-Mathematical-Methods-for-Robotics--Vision--and-Graphics">CS205A Mathematical Methods for Robotics Vision and Graphics</a><br>
+<a href="https://github.com/epfml/OptML_course">EPFL Optimization for Machine Learning CS439</a><br>
+<a href="https://github.com/dlsys-course/dlsys-course.github.io">DL System</a><br>
+<a href="https://github.com/dlsys-course/tinyflow">tiny flow</a></p>
+<hr>
+<p><a href="https://github.com/daohu527/Dig-into-Apollo">Apollo</a><br>
+<a href="https://github.com/peopledoc/mlv-tools-tutorial">Machine Learning Pipeline</a><br>
+<a href="https://github.com/cfenollosa/os-tutorial">OS Tutorial</a><br>
+<a href="https://github.com/LearnOpenGL-CN/LearnOpenGL-CN">Learn OpenGL</a><br>
+<a href="https://github.com/DrxMario/PyOpenGL-Tutorial">PyOpenGL</a><br>
+<a href="https://github.com/totex/PyOpenGL_tutorials">PyOpenGL</a><br>
+<a href="https://github.com/makelove/OpenCV-Python-Tutorial">OpenCV Python</a><br>
+<a href="https://github.com/china-testing/python-api-tesing">Python Testing</a><br>
+<a href="https://github.com/DroidAITech/ROS-Academy-for-Beginners">ROS for Beginners</a><br>
+<a href="https://github.com/djhworld/simple-computer">Simple Computer</a><br>
+<a href="https://github.com/caicloud/kube-ladder">Learn Kubebetes</a><br>
+<a href="https://github.com/Langhalsdino/Kubernetes-GPU-Guide">Kubernetes GPU</a><br>
+<a href="https://github.com/ggambetta/computer-graphics-from-scratch">Computer Graphics</a><br>
+<a href="https://github.com/Haseeb-Qureshi/lets-build-a-blockchain">Block Chain</a><br>
+<a href="https://github.com/kydos/dds-tutorial-cpp">DDS</a><br>
+<a href="https://github.com/autoas/as">AUTOSAR</a><br>
+<a href="https://github.com/raylene/eng-handbook">eng-handbook</a><br>
+<a href="https://github.com/AMZ-Driverless/fsd-resources">FSAE</a><br>
+<a href="https://github.com/gaoxiang12/slambook2">slambook 2</a><br>
+<a href="https://github.com/kks32/latex-course">latex</a></p>
+<hr>
+<p><a href="https://github.com/machinelearningmindset/TensorFlow-Course">TensorFlow Course</a><br>
+<a href="https://github.com/horance-liu/tensorflow-internals">TensorFlow Internals</a><br>
+<a href="https://github.com/fengdu78/deeplearning_ai_books">deeplearning.ai Notes</a><br>
+<a href="https://github.com/scutan90/DeepLearning-500-questions">Deep Learning 500 questions</a><br>
+<a href="https://github.com/microsoft/ai-edu">Microsoft AI EDU</a><br>
+<a href="https://github.com/deeplearning-ai/machine-learning-yearning-cn">Andrew Ng Book</a><br>
+<a href="https://github.com/d2l-ai/d2l-en">Li Mu Book</a><br>
+<a href="https://github.com/datawhalechina/leeml-notes">Li Hongyi Course</a><br>
+<a href="https://github.com/Avik-Jain/100-Days-Of-ML-Code">100 Days Of ML Code</a><br>
+<a href="https://github.com/zeusees/HyperDL-Tutorial">DL tutorial</a><br>
+<a href="https://github.com/r0f1/datascience">Data Science</a><br>
+<a href="https://github.com/smartgeometry-ucl/dl4g">DL for Graphics</a><br>
+<a href="https://github.com/HolmesShuan/CNN-Inference-Engine-Quick-View">CNN Engine</a></p>
+<hr>
+<p><a href="https://github.com/jwasham/coding-interview-university">Coding Interview University</a><br>
+<a href="https://github.com/CyC2018/CS-Notes">CS Notes</a><br>
+<a href="https://github.com/mtdvio/every-programmer-should-know">Every Programmer Should Know</a><br>
+<a href="https://github.com/MisterBooo/LeetCodeAnimation">LeetCodeAnimation</a><br>
+<a href="https://github.com/qiyuangong/leetcode">LeetCode Solution</a><br>
+<a href="https://github.com/kamyu104/LeetCode-Solutions">LeetCode Solution</a><br>
+<a href="https://github.com/imhuay/Algorithm_Interview_Notes-Chinese">Algorithm Interview Notes</a><br>
+<a href="https://github.com/pinzhenliao/InterviewPreparation">Interview Preparation</a><br>
+<a href="https://github.com/algorithm-visualizer/algorithm-visualizer">Algorithm Visualizer</a><br>
+<a href="https://github.com/wangzheng0822/algo">Algorithm</a><br>
+<a href="https://github.com/huihut/interview">C/C++ Interview</a><br>
+<a href="https://github.com/phodal/growth">Growth</a><br>
+<a href="https://github.com/zslomo/2019-Autumn-recruitment-experience">2019 Recruitment</a><br>
+<a href="https://github.com/lengyue1024/BAT_interviews">BAT interviews</a><br>
+<a href="https://github.com/leohxj/a-programmer-prepares">a programmer prepares</a></p>
+<hr>
+<p><a href="https://github.com/lijin-THU/notes-python">Notes Python</a><br>
+<a href="https://github.com/rougier/numpy-100">Numpy Exercise</a><br>
+<a href="https://github.com/kks32/cpp-software-development">Large Scale C++</a><br>
+<a href="https://github.com/JanuszBedkowski/gpu_computing_in_robotics">GPU computing</a><br>
+<a href="https://github.com/AllenDowney/LittleBookOfSemaphores">Little Book Of Semaphores</a></p>
+<hr>
+<h2 class="mume-header" id="paper-collections">Paper Collections</h2>
+
+<p><a href="https://github.com/ZHOUYI1023?after=Y3Vyc29yOjMw&amp;q=AWESOME&amp;tab=stars&amp;utf8=%E2%9C%93">Reviews</a><br>
+<a href="https://github.com/awesomedata/awesome-public-datasets">Datasets</a></p>
+<hr>
+<p><a href="https://github.com/Ewenwan/MVision">Machine Vision</a><br>
+<a href="https://github.com/jbhuang0604/awesome-computer-vision">Computer Vision</a><br>
+<a href="https://github.com/fregu856/papers">Computer Vision</a><br>
+<a href="https://github.com/kjw0612/awesome-deep-vision">Deep Vision</a><br>
+<a href="https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap">Deep Learning</a><br>
+<a href="https://github.com/thunlp/GNNPapers">Graph NN</a><br>
+<a href="https://github.com/LantaoYu/MARL-Papers">Multi-Agent RL</a><br>
+<a href="https://github.com/ssydasheng/Bayesian_neural_network_papers">Bayesian NN</a><br>
+<a href="https://github.com/mcgrady20150318/BayesianNeuralNetwork">Bayesian NN</a><br>
+<a href="https://github.com/nightrome/really-awesome-gan">GAN</a><br>
+<a href="https://github.com/openblockchains/awesome-blockchains">Blockchains</a><br>
+<a href="https://github.com/amusi/awesome-lane-detection">Lane Detection</a><br>
+<a href="https://github.com/mrgloom/awesome-semantic-segmentation">Semantic Segmentation</a><br>
+<a href="https://github.com/aikorea/awesome-rl">Reinforcement Learning</a><br>
+<a href="https://github.com/AGV-IIT-KGP/awesome-motion-planning">Motion Planning</a><br>
+<a href="https://github.com/shawnyuen/PoseEstiPaperCollection">Pose Estimation</a><br>
+<a href="https://github.com/D-X-Y/Awesome-NAS">NAS</a><br>
+<a href="https://github.com/hoya012/awesome-anomaly-detection">Anomaly Detection</a><br>
+<a href="https://github.com/uzh-rpg/event-based_vision_resources">Event-based Vision</a></p>
+<hr>
+<p><a href="https://github.com/autonomousdrivingkr/Awesome-Autonomous-Driving">Autonomous Driving</a><br>
+<a href="https://github.com/takeitallsource/awesome-autonomous-vehicles">Autonomous Driving</a><br>
+<a href="https://github.com/DeepTecher/awesome-autonomous-vehicle">Autonomous Driving</a><br>
+<a href="https://github.com/ZRZheng/Autonomous_Vehicle_Paper_Reading_List">Autonomous Driving</a></p>
+<hr>
+<p><a href="https://github.com/autoguard/awesome-vehicle-security-and-safety">Safety &amp; Security</a><br>
+<a href="https://github.com/embedded-boston/awesome-embedded-systems">Embedded System</a><br>
+<a href="https://github.com/nhivp/Awesome-Embedded">Embedded System</a><br>
+<a href="https://github.com/mre/awesome-static-analysis">Static Analysis</a></p>
+<hr>
+<p><a href="https://github.com/ahong007007/awesome-slam">SLAM</a><br>
+<a href="https://github.com/YiChenCityU/Recent_SLAM_Research">Recent SLAM</a><br>
+<a href="https://github.com/PaoPaoRobot/awesome-slam-datasets">SLAM Dataset</a><br>
+<a href="https://github.com/fkromer/awesome-ros2">ROS2</a><br>
+<a href="https://github.com/PaoPaoRobot/Awesome-VIO">VIO</a></p>
+<hr>
+<p><a href="https://github.com/fengbintu/Neural-Networks-on-Silicon">Neural Networks on Silicon</a><br>
+<a href="https://github.com/ZhishengWang/Embedded-Neural-Network">Embedded Neural Network</a><br>
+<a href="https://github.com/chester256/Model-Compression-Papers">Model Compression</a><br>
+<a href="https://github.com/sun254/awesome-model-compression-and-acceleration">Model Compression</a><br>
+<a href="https://github.com/MingSun-Tse/EfficientDNNs">Efficient DNN</a><br>
+<a href="https://github.com/EMDL/awesome-emdl">Embedded DL</a></p>
+<hr>
+<p><a href="https://github.com/mcanini/SysML-reading-list">SysML</a><br>
+<a href="https://github.com/HuaizhengZhang/Awesome-System-for-Machine-Learning">System for ML</a><br>
+<a href="https://github.com/1duo/awesome-ai-infrastructures">AI Infrastructures</a><br>
+<a href="https://github.com/CognonicLabs/awesome-AI-kubernetes">AI Kubernetes</a><br>
+<a href="https://github.com/bharathgs/Awesome-Distributed-Deep-Learning">Distributed DL</a><br>
+<a href="https://github.com/EthicalML/awesome-production-machine-learning">Production ML</a></p>
+<hr>
+<p><a href="https://github.com/xinychen/awesome-latex-drawing">Latex Drawing</a><br>
+<a href="https://github.com/posquit0/Awesome-CV">CV</a></p>
+<h2 class="mume-header" id="code">Code</h2>
+
+<p><a href="https://github.com/LiteOS/LiteOS">Lite OS</a><br>
+<a href="https://github.com/nieklinnenbank/FreeNOS">FreeNOS</a><br>
+<a href="https://github.com/aws/amazon-freertos">FreeRTOS</a></p>
+<hr>
+<p><a href="https://github.com/emmjaykay/stanford_self_driving_car_code">Stanford Self Driving Car Code</a><br>
+<a href="https://github.com/tensorflow/models">Tensorflow Models</a><br>
+<a href="https://github.com/NVIDIA/DeepLearningExamples">Nvidia DL Models</a><br>
+<a href="https://github.com/opencv/opencv_contrib">opencv contrib</a><br>
+<a href="https://github.com/rasbt/deeplearning-models">Deep Learning Models</a><br>
+<a href="https://github.com/zziz/pwc">Papers With Code</a><br>
+<a href="https://github.com/GitHubDaily/GitHubDaily">Github Daily</a><br>
+<a href="https://github.com/PRML/PRMLT">PRML Code</a><br>
+<a href="https://github.com/googlecartographer/cartographer">Cartographer</a><br>
+<a href="https://github.com/hujie-frank/SENet">SE Net</a><br>
+<a href="https://github.com/HKUST-Aerial-Robotics/VINS-Mono">VINS Mono</a><br>
+<a href="https://github.com/JakobEngel/dso">DSO</a><br>
+<a href="https://github.com/HorizonAD/stereo_dso">stereo DSO</a><br>
+<a href="https://github.com/ethz-asl/rovio">rovio</a><br>
+<a href="https://github.com/Oxford-PTAM/PTAM-GPL">PTAM</a><br>
+<a href="https://github.com/laboshinl/loam_velodyne">loam_velodyne</a><br>
+<a href="https://github.com/jakeret/tf_unet">UNet</a><br>
+<a href="https://github.com/ethz-asl/kalibr">Kalibr</a><br>
+<a href="https://github.com/rpng/kalibr_allan">Kalibr Allan</a><br>
+<a href="https://github.com/hengli/camodocal">CamOdoCal</a><br>
+<a href="https://github.com/lexfridman/deeptraffic">Deep Traffic</a><br>
+<a href="https://github.com/xdspacelab/openvslam">openVslam</a><br>
+<a href="https://github.com/lukemelas/EfficientNet-PyTorch">EfficientNet</a><br>
+<a href="https://github.com/hgpvision/darknet">darkent with comments</a><br>
+<a href="https://github.com/SullyChen/Autopilot-TensorFlow">AutoPilot</a><br>
+<a href="https://github.com/niessner/BundleFusion">BundleFusion</a><br>
+<a href="https://github.com/emmjaykay/stanford_self_driving_car_code">Stanford Darpa</a><br>
+<a href="https://github.com/leggedrobotics/darknet_ros">YOLO ROS</a><br>
+<a href="https://github.com/KumarRobotics/msckf_vio">msckf</a><br>
+<a href="https://github.com/daniilidis-group/msckf_mono">msckf_mono</a><br>
+<a href="https://github.com/mrs2017/MSCKF">msckf</a><br>
+<a href="https://github.com/ethz-asl/ethzasl_msf">msf</a><br>
+<a href="https://github.com/johannes-graeter/limo">limo</a><br>
+<a href="https://github.com/HKUST-Aerial-Robotics/A-LOAM">A loam</a><br>
+<a href="https://github.com/rubengooj/pl-slam">pl slam</a><br>
+<a href="https://github.com/bertinetto/cfnet">CF Net</a><br>
+<a href="https://github.com/msurtsukov/neural-ode">Neural ODE</a><br>
+<a href="https://github.com/ethz-asl/okvis_ros">OKVIS</a><br>
+<a href="https://github.com/zdzhaoyong/GSLAM">gslam</a><br>
+<a href="https://github.com/bertinetto/siamese-fc">siamese fc</a><br>
+<a href="https://github.com/RobustFieldAutonomyLab/LeGO-LOAM">LEGO Loam</a><br>
+<a href="https://github.com/OniroAI/MonoDepth-PyTorch">Mono Depth</a><br>
+<a href="https://github.com/tu-darmstadt-ros-pkg/hector_slam">Hector SLAM</a><br>
+<a href="https://github.com/ros-perception/slam_gmapping">gmapping</a><br>
+<a href="https://github.com/implus/SKNet">SKNet</a><br>
+<a href="https://github.com/urbste/MultiCol-SLAM">MultiCol SLAM</a><br>
+<a href="https://github.com/ildoonet/deepface">DeepFace</a><br>
+<a href="https://github.com/intel/libxcam">libxcam</a><br>
+<a href="https://github.com/ivipsourcecode/DS-SLAM">DS SLAM</a><br>
+<a href="https://github.com/BertaBescos/DynaSLAM">Dyna SLAM</a><br>
+<a href="https://github.com/rpng/R-VIO">R-VIO</a><br>
+<a href="https://github.com/anuranbaka/OpenDTAM">Open DTAM</a><br>
+<a href="https://github.com/Kolkir/mlcpp">ml cpp</a><br>
+<a href="https://github.com/zhudongyong/Panorama">Panorama</a><br>
+<a href="https://github.com/floatlazer/semantic_slam">Semantic SLAM</a><br>
+<a href="https://github.com/uzh-rpg/rpg_svo_example">svo</a><br>
+<a href="https://github.com/pppLang/SKNet">SK Net</a><br>
+<a href="https://github.com/dimatura/loam_continuous">loam continuous</a><br>
+<a href="https://github.com/OpenSLAM-org/openslam_gmapping">gmapping</a><br>
+<a href="https://github.com/ankita-kalra/PIXOR">PIXOR</a><br>
+<a href="https://github.com/apesIITM/lsd_slam_stereo">LSD stereo</a><br>
+<a href="https://github.com/nkwangyh/CubemapSLAM">Cubemap SLAM</a><br>
+<a href="https://github.com/daniilidis-group/event_feature_tracking">Event Feature Tracking</a><br>
+<a href="https://github.com/XinLiGH/GyroAllan">Gyro Allan</a><br>
+<a href="https://github.com/daobilige-su/loam_back_and_forth">loam back and forth</a><br>
+<a href="https://github.com/IBM/MAX-Image-Resolution-Enhancer">Super Resolution</a><br>
+<a href="https://github.com/PaoPaoRobot/ORB_SLAM2">ORB SLAM2</a></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

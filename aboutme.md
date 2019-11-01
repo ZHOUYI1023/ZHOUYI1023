@@ -9,6 +9,9 @@ My name is Yi Zhou. I am a growing-up software engineer with very broad cross-do
 ### My Interests
 
 I am very interested in expanding the border of automotive software engineering. I hold a positive attitude on trendings of autonomous driving and intelligent infotainment system.
+
+I love cute animals!
+
 ### My History
 
 * 2019.9 - 2020.9 Study MSc in Computer Vision, Robotics and Machine Learning in University of Surrey
